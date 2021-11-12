@@ -1,0 +1,36 @@
+/* Contact details*/
+.contact-details__info-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.contact-details__info-block img {
+  object-fit: cover;
+  width: 190px;
+  height: 190px;
+  max-width: 80%;
+  border-radius: 50%;
+  border: 10px solid #fff;
+}
+
+.contact-details__info-wrapper {
+  margin-top: 1rem;
+}
+
+.contact-details__info span, .contact-details__info a {
+  width: 60%;
+  display: inline-block;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.contact-details__info span {
+  color: #000;
+}
+
+.contact-details__info .contact-details__label {
+  color: #454545;
+  width: 40%;
+}

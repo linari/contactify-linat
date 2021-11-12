@@ -1,0 +1,124 @@
+/* Filters form */
+.filters {
+  display: inline-block;
+  vertical-align: middle;
+  direction: ltr;
+  background: rgba(51, 66, 168, 0.2);
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  padding: 1.4rem 1.2rem 1.5rem;
+  width: calc(100% - 315px);
+}
+
+.filters__field, .filters__btns {
+  display: inline-block;
+  vertical-align: bottom;  
+}
+
+.filters__field {
+  margin-right: 1rem;
+}
+
+.filters__field input[type="text"], .filters__field select {
+  appearance: none;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  width: 160px;
+  vertical-align: bottom;
+}
+
+.filters__field input:focus, .filters__field select:focus {
+  outline: none;
+}
+
+.filters__field input::placeholder, .filters__field input[type="checkbox"] + label {
+  color: #fff;
+}
+
+.filters__field input[type="checkbox"] {
+  vertical-align: middle;
+  border-color: #fff;
+  margin-right: 0.5rem;
+}
+
+.filters__field input[type="checkbox"] + label {
+  vertical-align: middle;
+  margin-right: 2rem;
+}
+
+.filters__field-select {
+  position: relative;
+}
+
+.filters__field-select::after {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.5rem);
+  content: '\f0d7';
+  display: inline-block;
+  font-family: 'FontAwesome';
+  color: #fff;
+}
+
+.filters__field-select select {
+  cursor: pointer;
+  padding-right: 1rem;
+  position: sticky;
+  z-index: 1;
+}
+
+.filters__field-select option {
+  color: var(--grey);
+  padding: 0.2rem;
+}
+
+.filters__btn-submit {
+  appearance: none;
+  padding: 0.62rem 1.8rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background: var(--green);
+  color: #fff;
+}
+
+.filters__btn-submit:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .filters__btns {
+    margin: 1rem 0 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .filters {
+    height: auto;
+    width: calc(100% - 315px);
+  }
+  .filters__field {
+    width: 100%;
+    margin: 0.7rem 0;
+  }
+  .filters__field input[type="text"], .filters__field select {
+    width: 100%;
+  }
+  .filters__btns {
+    margin: 0.7rem 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filters {
+    width: 100%;
+  }
+}
