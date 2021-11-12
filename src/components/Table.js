@@ -8,7 +8,7 @@ function Table(props) {
   const contacts = props.contacts;
   const [showElement, setShowElement] = useState(false);
   const handleClick = () => { setShowElement(!showElement) };
-
+  /* React table data */
   const {
     getTableProps,
     getTableBodyProps,
@@ -34,6 +34,7 @@ function Table(props) {
         <table {...getTableProps()} className="contacts-list__table table-list" >
           <thead>
             {headerGroups.map((headerGroup) => (
+              /* Mapping headers for table */
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
                   <th {...column.getHeaderProps(column.getSortByToggleProps())} className={'align-' + column.alignment}>
@@ -41,6 +42,7 @@ function Table(props) {
                     {column.isSorted ? (column.isSortedDesc ? <i className="fas fa-arrow-up"></i> : <i className="fas fa-arrow-down"></i>) : ''}
                   </th>
                 ))}
+                {/*  Additional header for columns toggle functionality */}
                 <th className={showElement ? 'contacts-list__filters active' : 'contacts-list__filters'} >
                   <i className="fas fa-list" onClick={handleClick} ></i>
                   <ul className={showElement ? 'contacts-list__toggle-filters visible' : 'contacts-list__toggle-filters'}>
@@ -62,6 +64,7 @@ function Table(props) {
             ))}
           </thead>
           <tbody {...getTableBodyProps()} className={showElement ? 'overlay-visible' : ''}>
+          {/* Mapping rows with contacts data from api */}
           {rows.map((row) => {
             prepareRow(row)
             return (

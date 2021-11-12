@@ -10,7 +10,6 @@
 .contacts-list__table {
   position: relative;
   display: table;
-  /* float: left; */
   border-collapse: collapse;
   border-spacing: 0;
   background: #fff;
